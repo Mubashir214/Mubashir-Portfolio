@@ -69,8 +69,140 @@ section{padding:110px 0}
 .st em{font-style:normal;background:linear-gradient(90deg,var(--gold),#fbbf24 50%,var(--sky));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .ss{color:var(--muted);max-width:520px;font-size:1rem;line-height:1.8}
 
-/* HERO, ABOUT, SKILLS, EDUCATION, CONTACT styles remain the same as your original */
- /* (I kept all original styles to avoid making the response too long) */
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ===================== HERO ===================== */
+#hero{padding-top:140px;padding-bottom:100px;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+.o1{width:600px;height:600px;background:radial-gradient(circle,rgba(240,165,0,.15),transparent 70%);top:-100px;right:-150px}
+.o2{width:500px;height:500px;background:radial-gradient(circle,rgba(56,189,248,.1),transparent 70%);bottom:-50px;left:-100px}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(240,165,0,.08);border:1px solid rgba(240,165,0,.2);border-radius:100px;padding:6px 16px 6px 8px;font-size:.78rem;font-family:'Manrope',sans-serif;font-weight:600;color:var(--gold);margin-bottom:28px;width:fit-content}
+.bdot{width:8px;height:8px;background:var(--mint);border-radius:50%;animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,.4)}50%{box-shadow:0 0 0 6px rgba(52,211,153,0)}}
+.hname{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,14vw,13rem);line-height:.9;letter-spacing:-.02em;color:var(--text);margin-bottom:0}
+.hname .l2{display:block;-webkit-text-stroke:2px var(--gold);color:transparent;background:linear-gradient(90deg,var(--gold) 30%,transparent);-webkit-background-clip:text;background-clip:text}
+.hroles{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:24px 0 20px;font-family:'Manrope',sans-serif;font-size:.9rem;font-weight:600;color:var(--muted)}
+.hrs{width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0}
+.hdesc{color:var(--muted);max-width:580px;font-size:1.05rem;line-height:1.8;margin-bottom:36px}
+.hacts{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:60px}
+.bg{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold),#fbbf24);color:#06080f;font-family:'Manrope',sans-serif;font-weight:700;font-size:.88rem;padding:12px 24px;border-radius:11px;box-shadow:0 6px 24px var(--gold-glow);transition:transform .2s,box-shadow .2s}
+.bg:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(240,165,0,.4)}
+.bgh{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border2);color:var(--text);font-family:'Manrope',sans-serif;font-weight:600;font-size:.88rem;padding:12px 22px;border-radius:11px;transition:background .2s,border-color .2s,transform .2s}
+.bgh:hover{background:var(--surface2);border-color:rgba(255,255,255,.22);transform:translateY(-2px)}
+.hstats{display:flex;gap:48px;flex-wrap:wrap}
+.hstat{display:flex;flex-direction:column;gap:4px}
+.hsn{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;color:var(--gold);display:flex;align-items:flex-start;gap:2px}
+.hsn sup{font-size:1.2rem;margin-top:6px}
+.hsl{font-family:'Manrope',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.scrl{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-family:'Manrope',sans-serif}
+.sm{width:1px;height:48px;background:var(--border2);position:relative;overflow:hidden}
+.sw{width:100%;height:50%;background:linear-gradient(to bottom,transparent,var(--gold));position:absolute;top:-50%;animation:scrollMove 1.8s ease infinite}
+@keyframes scrollMove{to{top:150%}}
+
+/* ===================== ABOUT ===================== */
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:52px}
+@media(max-width:768px){.ag{grid-template-columns:1fr;gap:36px}}
+.at p{color:var(--muted);line-height:1.9;margin-bottom:18px;font-size:.97rem}
+.achips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{background:var(--gold-dim);border:1px solid rgba(240,165,0,.2);color:var(--gold);font-size:.75rem;font-family:'Manrope',sans-serif;font-weight:600;padding:5px 12px;border-radius:100px}
+.acard{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.acard h3{font-family:'Manrope',sans-serif;font-size:.9rem;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.dr{display:flex;align-items:flex-start;gap:14px}
+.dri{width:34px;height:34px;background:var(--gold-dim);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.8rem;flex-shrink:0}
+.drl{font-size:.72rem;font-family:'Manrope',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:2px}
+.drv{font-size:.88rem;color:var(--text);font-weight:500}
+
+/* ===================== SKILLS ===================== */
+.skg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:52px}
+.skc{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s,transform .2s}
+.skc:hover{border-color:var(--border2);transform:translateY(-4px)}
+.skch{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.ski{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.ski.gold{background:var(--gold-dim);color:var(--gold)}
+.ski.sky{background:var(--sky-dim);color:var(--sky)}
+.ski.mint{background:rgba(52,211,153,.1);color:var(--mint)}
+.ski.rose{background:rgba(251,113,133,.1);color:var(--rose)}
+.ski.purple{background:rgba(167,139,250,.1);color:var(--purple)}
+.skt{font-family:'Manrope',sans-serif;font-weight:700;font-size:.95rem}
+.skil{display:flex;flex-direction:column;gap:10px}
+.skitem{display:flex;flex-direction:column;gap:5px}
+.skname{font-size:.8rem;font-family:'Manrope',sans-serif;font-weight:600;color:var(--text);display:flex;justify-content:space-between}
+.skbar{height:4px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden}
+.skfill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--gold),#fbbf24);transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.sktags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.stag{background:var(--surface2);border:1px solid var(--border);font-size:.72rem;font-family:'Manrope',sans-serif;font-weight:600;color:var(--muted);padding:4px 10px;border-radius:6px}
+
+/* ===================== PROJECTS ===================== */
+.fw{display:flex;gap:8px;flex-wrap:wrap;margin:32px 0 36px}
+.fb{background:var(--surface);border:1px solid var(--border);color:var(--muted);font-family:'Manrope',sans-serif;font-size:.8rem;font-weight:600;padding:8px 18px;border-radius:9px;cursor:pointer;transition:all .2s}
+.fb:hover{border-color:var(--border2);color:var(--text)}
+.fb.on{background:var(--gold-dim);border-color:rgba(240,165,0,.4);color:var(--gold)}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.pc{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:14px;cursor:default;transition:border-color .25s,box-shadow .25s}
+.pc:hover{border-color:var(--border2);box-shadow:0 8px 40px rgba(0,0,0,.4)}
+@keyframes pcIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.pct{display:flex;align-items:center;justify-content:space-between}
+.plinks{display:flex;gap:10px}
+.plinks a{width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);border-radius:8px;color:var(--muted);font-size:.9rem;transition:background .2s,color .2s}
+.plinks a:hover{background:var(--gold-dim);color:var(--gold)}
+.bdg{font-size:.68rem;font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:6px}
+.bai{background:rgba(240,165,0,.12);color:var(--gold);border:1px solid rgba(240,165,0,.2)}
+.bfs{background:rgba(56,189,248,.1);color:var(--sky);border:1px solid rgba(56,189,248,.2)}
+.bcl{background:rgba(52,211,153,.1);color:var(--mint);border:1px solid rgba(52,211,153,.2)}
+.bsy{background:rgba(167,139,250,.1);color:var(--purple);border:1px solid rgba(167,139,250,.2)}
+.bsec{background:rgba(251,113,133,.1);color:var(--rose);border:1px solid rgba(251,113,133,.2)}
+.ptitle{font-family:'Manrope',sans-serif;font-weight:700;font-size:.97rem;line-height:1.35;color:var(--text)}
+.pdesc{font-size:.84rem;color:var(--muted);line-height:1.7;flex:1}
+.ptechs{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.tp{background:var(--surface2);font-size:.71rem;font-family:'Manrope',sans-serif;font-weight:600;color:var(--muted);padding:3px 9px;border-radius:5px;border:1px solid var(--border)}
+
+/* ===================== EDUCATION ===================== */
+.edg{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
+@media(max-width:768px){.edg{grid-template-columns:1fr}}
+.edc{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:30px;transition:border-color .2s,transform .2s;position:relative;overflow:hidden}
+.edc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),#fbbf24)}
+.edc:hover{border-color:var(--border2);transform:translateY(-4px)}
+.edtype{font-size:.7rem;font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.edtitle{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:6px;line-height:1.3}
+.edsub{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.edmeta{display:flex;gap:16px;flex-wrap:wrap}
+.edm{display:flex;align-items:center;gap:6px;font-size:.78rem;font-family:'Manrope',sans-serif;font-weight:600;color:var(--muted)}
+.edm i{color:var(--gold);font-size:.75rem}
+.edcourses{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px}
+.edcourse{background:var(--gold-dim);border:1px solid rgba(240,165,0,.15);font-size:.72rem;font-family:'Manrope',sans-serif;font-weight:600;color:var(--gold);padding:4px 10px;border-radius:6px}
+
+/* ===================== CONTACT ===================== */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:52px}
+@media(max-width:768px){.cg{grid-template-columns:1fr;gap:32px}}
+.cinfos{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.cinfo{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;transition:border-color .2s}
+.cinfo:hover{border-color:var(--border2)}
+.cii{width:42px;height:42px;border-radius:10px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1rem;flex-shrink:0}
+.cil{font-size:.72rem;font-family:'Manrope',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:2px}
+.civ{font-size:.9rem;font-weight:600;color:var(--text)}
+.csoc{display:flex;gap:12px;flex-wrap:wrap}
+.csoca{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);padding:10px 18px;border-radius:10px;font-size:.83rem;font-family:'Manrope',sans-serif;font-weight:600;color:var(--muted);transition:all .2s}
+.csoca:hover{border-color:var(--border2);color:var(--text);transform:translateY(-2px)}
+.cform{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:18px}
+.cform h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:1rem;margin-bottom:4px}
+.fg{display:flex;flex-direction:column;gap:6px}
+.fg label{font-size:.78rem;font-family:'Manrope',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.fg input,.fg textarea{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:'Figtree',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;resize:vertical}
+.fg input:focus,.fg textarea:focus{border-color:rgba(240,165,0,.4)}
+.fg textarea{min-height:110px}
+.csbtn{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--gold),#fbbf24);color:#06080f;font-family:'Manrope',sans-serif;font-weight:700;font-size:.9rem;padding:14px 28px;border-radius:11px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 24px var(--gold-glow);width:100%}
+.csbtn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(240,165,0,.4)}
+
+/* ===================== FOOTER ===================== */
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--muted);font-family:'Manrope',sans-serif;font-weight:500}
+.fhrt{color:var(--rose)}
+.fsoc{display:flex;gap:16px}
+.fsoc a{color:var(--muted);font-size:1rem;transition:color .2s}
+.fsoc a:hover{color:var(--gold)}
+@media(max-width:768px){footer{padding:24px 20px;flex-direction:column;align-items:center;text-align:center}}
 </style>
 </head>
 <body>
@@ -100,46 +232,57 @@ section{padding:110px 0}
 
 <main>
 
-<!-- HERO -->
+<!-- ==================== HERO ==================== -->
 <section id="hero" class="W">
-  <div class="orb o1"></div><div class="orb o2"></div>
-  <div class="hbadge"><span class="bdot"></span> Open to Opportunities</div>
-  <h1 class="hname">Mubashir<span class="l2">Siddique</span></h1>
-  <div class="hroles">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="hbadge rv"><span class="bdot"></span> Open to Opportunities</div>
+  <h1 class="hname rv d1">Mubashir<span class="l2">Siddique</span></h1>
+  <div class="hroles rv d2">
     <span class="hri">Full-Stack Developer</span>
     <span class="hrs"></span>
     <span class="hri">Cloud Engineer</span>
     <span class="hrs"></span>
     <span class="hri">AI / ML Engineer</span>
   </div>
-  <p class="hdesc">Final-year CS student at FAST-NUCES building intelligent systems — from NLP transformers and RAG pipelines to cloud infrastructure and full-stack web applications.</p>
-  <div class="hacts">
+  <p class="hdesc rv d2">Final-year CS student at FAST-NUCES building intelligent systems — from NLP transformers and RAG pipelines to cloud infrastructure and full-stack web applications.</p>
+  <div class="hacts rv d3">
     <a class="bg" href="#projects"><i class="fas fa-code"></i> View Projects</a>
     <a class="bgh" href="https://www.linkedin.com/in/mubashir-siddique-2b5604365/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
     <a class="bgh" href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     <a class="bgh" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
   </div>
-  <div class="hstats">
-    <div class="hstat"><div class="hsn"><span class="ct" data-to="25">0</span><sup>+</sup></div><div class="hsl">Projects Built</div></div>
-    <div class="hstat"><div class="hsn"><span class="ct" data-to="4">0</span><sup>+</sup></div><div class="hsl">Tech Domains</div></div>
-    <div class="hstat"><div class="hsn"><span class="ct" data-to="4">0</span><sup>th</sup></div><div class="hsl">Year CS Student</div></div>
+  <div class="hstats rv d4">
+    <div class="hstat">
+      <div class="hsn"><span class="ct" data-to="25">0</span><sup>+</sup></div>
+      <div class="hsl">Projects Built</div>
+    </div>
+    <div class="hstat">
+      <div class="hsn"><span class="ct" data-to="4">0</span><sup>+</sup></div>
+      <div class="hsl">Tech Domains</div>
+    </div>
+    <div class="hstat">
+      <div class="hsn"><span class="ct" data-to="4">0</span><sup>th</sup></div>
+      <div class="hsl">Year CS Student</div>
+    </div>
   </div>
   <div class="scrl"><div class="sm"><div class="sw"></div></div>Scroll</div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ABOUT (unchanged) -->
+<!-- ==================== ABOUT ==================== -->
 <section id="about">
   <div class="W">
     <div class="rv"><p class="ey">About Me</p><h2 class="st">Turning complex ideas<br>into <em>real software</em></h2></div>
     <div class="ag">
       <div class="at rv d1">
         <p>I'm a final-year Computer Science student at FAST-NUCES with a passion for building at the intersection of AI, cloud, and web technologies. I specialize in NLP transformer models, RAG systems, cloud infrastructure (AWS / Azure), and full-stack MERN development.</p>
-        <p>Currently working on my Final Year Project and exploring opportunities in AI engineering and software development. I also work as a freelancer and Teaching Assistant.</p>
+        <p>Currently working on my Final Year Project and exploring opportunities in AI engineering and software development. I also work as a freelancer and Teaching Assistant, helping juniors navigate complex CS concepts.</p>
         <div class="achips">
           <span class="chip">NLP / Transformers</span><span class="chip">RAG Systems</span><span class="chip">MERN Stack</span>
           <span class="chip">AWS / Azure</span><span class="chip">PyTorch</span><span class="chip">System Design</span>
+          <span class="chip">GANs / Diffusion</span><span class="chip">Big Data</span>
         </div>
       </div>
       <div class="rv d2">
@@ -159,124 +302,249 @@ section{padding:110px 0}
 
 <div class="divider"></div>
 
-<!-- SKILLS (unchanged) -->
+<!-- ==================== SKILLS ==================== -->
 <section id="skills">
   <div class="W">
     <div class="rv"><p class="ey">Technical Skills</p><h2 class="st">Tools &amp; <em>Technologies</em></h2><p class="ss">A broad skill set spanning AI/ML research, cloud engineering, and modern full-stack development.</p></div>
     <div class="skg">
-      <!-- Your original skills cards remain the same -->
-      <div class="skc rv d1"> ... </div>
-      <div class="skc rv d2"> ... </div>
-      <div class="skc rv d3"> ... </div>
-      <div class="skc rv d4"> ... </div>
+
+      <div class="skc rv d1">
+        <div class="skch"><div class="ski gold"><i class="fas fa-brain"></i></div><div class="skt">AI / ML / DL</div></div>
+        <div class="skil">
+          <div class="skitem"><div class="skname"><span>PyTorch</span><span>90%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="90"></div></div></div>
+          <div class="skitem"><div class="skname"><span>HuggingFace Transformers</span><span>88%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="88"></div></div></div>
+          <div class="skitem"><div class="skname"><span>TensorFlow / Keras</span><span>78%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="78"></div></div></div>
+          <div class="skitem"><div class="skname"><span>Scikit-learn</span><span>85%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="85"></div></div></div>
+        </div>
+        <div class="sktags"><span class="stag">NLP</span><span class="stag">RAG</span><span class="stag">GANs</span><span class="stag">Diffusion</span><span class="stag">VLMs</span><span class="stag">LoRA</span></div>
+      </div>
+
+      <div class="skc rv d2">
+        <div class="skch"><div class="ski sky"><i class="fas fa-code"></i></div><div class="skt">Languages</div></div>
+        <div class="skil">
+          <div class="skitem"><div class="skname"><span>Python</span><span>92%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="92"></div></div></div>
+          <div class="skitem"><div class="skname"><span>JavaScript / TypeScript</span><span>82%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="82"></div></div></div>
+          <div class="skitem"><div class="skname"><span>C / C++</span><span>80%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="80"></div></div></div>
+          <div class="skitem"><div class="skname"><span>SQL</span><span>75%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="75"></div></div></div>
+        </div>
+        <div class="sktags"><span class="stag">Jupyter</span><span class="stag">Bash</span><span class="stag">HTML/CSS</span></div>
+      </div>
+
+      <div class="skc rv d3">
+        <div class="skch"><div class="ski mint"><i class="fas fa-layer-group"></i></div><div class="skt">Full-Stack</div></div>
+        <div class="skil">
+          <div class="skitem"><div class="skname"><span>React.js</span><span>85%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="85"></div></div></div>
+          <div class="skitem"><div class="skname"><span>Node.js / Express</span><span>83%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="83"></div></div></div>
+          <div class="skitem"><div class="skname"><span>MongoDB</span><span>80%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="80"></div></div></div>
+          <div class="skitem"><div class="skname"><span>REST APIs</span><span>88%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="88"></div></div></div>
+        </div>
+        <div class="sktags"><span class="stag">MERN</span><span class="stag">JWT Auth</span><span class="stag">Streamlit</span></div>
+      </div>
+
+      <div class="skc rv d4">
+        <div class="skch"><div class="ski purple"><i class="fas fa-cloud"></i></div><div class="skt">Cloud &amp; Big Data</div></div>
+        <div class="skil">
+          <div class="skitem"><div class="skname"><span>AWS</span><span>72%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="72"></div></div></div>
+          <div class="skitem"><div class="skname"><span>Azure</span><span>68%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="68"></div></div></div>
+          <div class="skitem"><div class="skname"><span>Hadoop / MapReduce</span><span>75%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="75"></div></div></div>
+          <div class="skitem"><div class="skname"><span>Docker</span><span>70%</span></div><div class="skbar"><div class="skfill" style="width:0" data-w="70"></div></div></div>
+        </div>
+        <div class="sktags"><span class="stag">HDFS</span><span class="stag">Spark</span><span class="stag">Linux</span><span class="stag">Git</span></div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- PROJECTS - UPDATED -->
+<!-- ==================== PROJECTS ==================== -->
 <section id="projects">
   <div class="W">
-    <div class="rv"><p class="ey">Work</p><h2 class="st">Featured <em>Projects</em></h2><p class="ss">25+ projects across AI/ML, cloud engineering, full-stack development, and systems programming.</p></div>
-    
+    <div class="rv">
+      <p class="ey">Work</p>
+      <h2 class="st">Featured <em>Projects</em></h2>
+      <p class="ss">25+ projects across AI/ML, cloud engineering, full-stack development, and systems programming.</p>
+    </div>
+
     <div class="fw rv">
       <button class="fb on" data-cat="all">All Projects</button>
       <button class="fb" data-cat="ai">AI / ML / NLP</button>
       <button class="fb" data-cat="fs">Full-Stack</button>
-      <button class="fb" data-cat="cloud">Cloud &amp; Systems</button>
+      <button class="fb" data-cat="cloud">Cloud &amp; Big Data</button>
       <button class="fb" data-cat="sys">DSA / OOP</button>
     </div>
 
     <div class="pg rv" id="pgrid">
 
-      <!-- ==================== AI / ML ==================== -->
+      <!-- ======= AI / ML / NLP ======= -->
+
       <div class="pc" data-cat="ai">
-        <div class="pct"><span class="bdg bai">AI / NLP</span><div class="plinks"><a href="https://github.com/Mubashir214/Neural-Machine-Translation-NMT-Urdu-to-Roman-Urdu" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bai">AI / NLP</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Neural-Machine-Translation-NMT-Urdu-to-Roman-Urdu" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">Neural Machine Translation — Urdu → Roman Urdu</div>
-        <div class="pdesc">BiLSTM seq2seq model for Urdu to Roman Urdu translation with custom preprocessing for spelling variations.</div>
-        <div class="ptechs"><span class="tp">Python</span><span class="tp">PyTorch</span><span class="tp">BiLSTM</span><span class="tp">NLP</span></div>
+        <div class="pdesc">BiLSTM seq2seq model for translating Urdu script to Roman Urdu with custom preprocessing for spelling variations.</div>
+        <div class="ptechs"><span class="tp">Python</span><span class="tp">PyTorch</span><span class="tp">BiLSTM</span><span class="tp">Seq2Seq</span><span class="tp">NLP</span></div>
       </div>
 
       <div class="pc" data-cat="ai">
-        <div class="pct"><span class="bdg bai">AI / NLP</span><div class="plinks"><a href="https://github.com/Mubashir214/UrduTransformer-Chatbot" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bai">AI / NLP</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/UrduTransformer-Chatbot" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">Urdu Transformer Chatbot</div>
-        <div class="pdesc">End-to-end transformer-based conversational AI for Urdu language with custom tokenization.</div>
-        <div class="ptechs"><span class="tp">Python</span><span class="tp">PyTorch</span><span class="tp">Transformers</span></div>
+        <div class="pdesc">End-to-end transformer-based conversational AI for Urdu language built from scratch with custom tokenization and training pipeline.</div>
+        <div class="ptechs"><span class="tp">Python</span><span class="tp">PyTorch</span><span class="tp">Transformers</span><span class="tp">NLP</span></div>
       </div>
 
       <div class="pc" data-cat="ai">
-        <div class="pct"><span class="bdg bai">AI / NLP</span><div class="plinks"><a href="https://github.com/Mubashir214/Encoder-Only-BERT-Customer-Feedback-Classification" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bai">AI / NLP</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Encoder-Only-BERT-Customer-Feedback-Classification" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">BERT Feedback Classification</div>
-        <div class="pdesc">Fine-tuned BERT for multi-class customer feedback classification using transfer learning.</div>
-        <div class="ptechs"><span class="tp">BERT</span><span class="tp">HuggingFace</span><span class="tp">PyTorch</span></div>
+        <div class="pdesc">Fine-tuned BERT encoder for multi-class customer feedback classification using transfer learning and HuggingFace.</div>
+        <div class="ptechs"><span class="tp">BERT</span><span class="tp">HuggingFace</span><span class="tp">PyTorch</span><span class="tp">NLP</span></div>
       </div>
 
       <div class="pc" data-cat="ai">
-        <div class="pct"><span class="bdg bai">AI / Code Gen</span><div class="plinks"><a href="https://github.com/Mubashir214/Decoder-Only-GPT-2-or-LLaMA-Pseudo-code-to-Code-C-Generation" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bai">AI / Code Gen</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Decoder-Only-GPT-2-or-LLaMA-Pseudo-code-to-Code-C-Generation" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">GPT-2 / LLaMA — Pseudo-code to C Code</div>
-        <div class="pdesc">Fine-tuned decoder-only models for generating C code from natural language pseudo-code.</div>
-        <div class="ptechs"><span class="tp">GPT-2</span><span class="tp">LLaMA</span><span class="tp">HuggingFace</span></div>
+        <div class="pdesc">Fine-tuned decoder-only LLMs for generating C code from natural language pseudo-code with comparative benchmarking.</div>
+        <div class="ptechs"><span class="tp">GPT-2</span><span class="tp">LLaMA</span><span class="tp">HuggingFace</span><span class="tp">Code Gen</span></div>
       </div>
 
       <div class="pc" data-cat="ai">
-        <div class="pct"><span class="bdg bai">AI / RAG</span><div class="plinks"><a href="https://github.com/Mubashir214/RAG-for-Diagnostic-Reasoning-for-Clinical-Notes-DiReCT-1" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bai">AI / NLP</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Encoder-Decoder-T5-BART-Text-Summarization" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="ptitle">T5 / BART Text Summarization</div>
+        <div class="pdesc">Encoder-decoder models (T5 and BART) for abstractive text summarization with ROUGE benchmarking and comparison.</div>
+        <div class="ptechs"><span class="tp">T5</span><span class="tp">BART</span><span class="tp">HuggingFace</span><span class="tp">PyTorch</span></div>
+      </div>
+
+      <div class="pc" data-cat="ai">
+        <div class="pct"><span class="bdg bai">AI / RAG</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/RAG-for-Diagnostic-Reasoning-for-Clinical-Notes-DiReCT-1" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">RAG Clinical Reasoning System (DiReCT)</div>
-        <div class="pdesc">Retrieval-Augmented Generation pipeline for clinical diagnostic reasoning.</div>
-        <div class="ptechs"><span class="tp">RAG</span><span class="tp">LLM</span><span class="tp">Vector DB</span></div>
-      </div>
-
-      <!-- Additional AI Projects -->
-      <div class="pc" data-cat="ai">
-        <div class="pct"><span class="bdg bai">AI / Vision</span><div class="plinks"><a href="https://github.com/Mubashir214/diffusion-face-generator-streamlit" target="_blank"><i class="fab fa-github"></i></a></div></div>
-        <div class="ptitle">Diffusion Face Generator (Streamlit)</div>
-        <div class="pdesc">DDPM-based face generation web app with visualization of denoising process.</div>
-        <div class="ptechs"><span class="tp">PyTorch</span><span class="tp">Diffusion</span><span class="tp">Streamlit</span></div>
+        <div class="pdesc">Retrieval-Augmented Generation pipeline for clinical diagnostic reasoning from medical notes using vector databases.</div>
+        <div class="ptechs"><span class="tp">RAG</span><span class="tp">LLM</span><span class="tp">Vector DB</span><span class="tp">Python</span></div>
       </div>
 
       <div class="pc" data-cat="ai">
-        <div class="pct"><span class="bdg bai">AI / GANs</span><div class="plinks"><a href="https://github.com/Mubashir214/Tackling-Mode-Collapse-in-Generative-Adversarial-Networks-GANs-" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bai">AI / Vision</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/diffusion-face-generator-streamlit" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="ptitle">DDPM Face Generator (Streamlit)</div>
+        <div class="pdesc">Diffusion model (DDPM) face generation web app with PyTorch and Streamlit. Visualizes step-by-step denoising process.</div>
+        <div class="ptechs"><span class="tp">PyTorch</span><span class="tp">Diffusion</span><span class="tp">DDPM</span><span class="tp">Streamlit</span></div>
+      </div>
+
+      <div class="pc" data-cat="ai">
+        <div class="pct"><span class="bdg bai">AI / GANs</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Tackling-Mode-Collapse-in-Generative-Adversarial-Networks-GANs-" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">Tackling Mode Collapse in GANs</div>
-        <div class="pdesc">Advanced techniques to solve mode collapse problem in Generative Adversarial Networks.</div>
-        <div class="ptechs"><span class="tp">PyTorch</span><span class="tp">GANs</span></div>
+        <div class="pdesc">Research and implementation of techniques to solve mode collapse in Generative Adversarial Networks with experiments.</div>
+        <div class="ptechs"><span class="tp">PyTorch</span><span class="tp">GANs</span><span class="tp">Python</span></div>
       </div>
 
-      <!-- Full-Stack Projects -->
+      <div class="pc" data-cat="ai">
+        <div class="pct"><span class="bdg bai">AI / Vision</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Doodle-to-Real-Image-Translation-and-Colorization-using-Pix2Pix" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="ptitle">Pix2Pix Doodle-to-Real Translation</div>
+        <div class="pdesc">Image-to-image translation and colorization system using Pix2Pix conditional GANs — converts sketches to photo-realistic images.</div>
+        <div class="ptechs"><span class="tp">Pix2Pix</span><span class="tp">cGAN</span><span class="tp">PyTorch</span><span class="tp">Vision</span></div>
+      </div>
+
+      <div class="pc" data-cat="ai">
+        <div class="pct"><span class="bdg bai">AI / Vision</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Self-Supervised-Image-Representation-Learning-using-Masked-Autoencoders-MAE-" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="ptitle">Masked Autoencoders (MAE) for Self-Supervised Learning</div>
+        <div class="pdesc">Self-supervised image representation learning using Masked Autoencoders (MAE) — learns visual features without labeled data.</div>
+        <div class="ptechs"><span class="tp">MAE</span><span class="tp">PyTorch</span><span class="tp">Vision</span><span class="tp">Self-Supervised</span></div>
+      </div>
+
+      <div class="pc" data-cat="ai">
+        <div class="pct"><span class="bdg bai">AI / VLM</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Vision-Language-Models-VLM-using-QLoRA-Fine--Tuning-for-Document-to-Markdown-Generation" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="ptitle">VLM Document to Markdown (QLoRA)</div>
+        <div class="pdesc">Vision-Language Model fine-tuned with QLoRA for converting document images to structured Markdown — efficient PEFT training.</div>
+        <div class="ptechs"><span class="tp">VLM</span><span class="tp">QLoRA</span><span class="tp">HuggingFace</span><span class="tp">PEFT</span></div>
+      </div>
+
+      <div class="pc" data-cat="ai">
+        <div class="pct"><span class="bdg bsec">AI / Security</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Password-Strength-Analyzer-ML" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="ptitle">Password Strength Analyzer (ML)</div>
+        <div class="pdesc">Machine learning model to analyze and classify password strength, extracting entropy and pattern features for security evaluation.</div>
+        <div class="ptechs"><span class="tp">Python</span><span class="tp">ML</span><span class="tp">Scikit-learn</span><span class="tp">Security</span></div>
+      </div>
+
+      <!-- ======= FULL-STACK ======= -->
+
       <div class="pc" data-cat="fs">
-        <div class="pct"><span class="bdg bfs">Full-Stack</span><div class="plinks"><a href="https://github.com/Mubashir214/FYP" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bfs">Full-Stack</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/FYP" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">AI Smart Scrum Assistant (FYP)</div>
-        <div class="pdesc">AI-powered Scrum management system with auto user story generation and intelligent task assignment.</div>
+        <div class="pdesc">AI-powered Scrum management system with automated user story generation, intelligent task assignment, and sprint analytics.</div>
         <div class="ptechs"><span class="tp">React</span><span class="tp">Node.js</span><span class="tp">MongoDB</span><span class="tp">AI</span></div>
       </div>
 
       <div class="pc" data-cat="fs">
-        <div class="pct"><span class="bdg bfs">Full-Stack</span><div class="plinks"><a href="https://github.com/Mubashir214/BookBridge" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bfs">Full-Stack</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/BookBridge" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">BookBridge — Student Book Exchange</div>
-        <div class="pdesc">Platform for students to buy, sell and donate academic books with ratings and search.</div>
-        <div class="ptechs"><span class="tp">React</span><span class="tp">Node.js</span><span class="tp">MongoDB</span></div>
+        <div class="pdesc">Full-stack MERN platform for students to buy, sell, and donate academic books with authentication, ratings, and search.</div>
+        <div class="ptechs"><span class="tp">React</span><span class="tp">Node.js</span><span class="tp">MongoDB</span><span class="tp">Express</span></div>
       </div>
 
-      <!-- Cloud & Systems -->
+      <!-- ======= CLOUD & BIG DATA ======= -->
+
       <div class="pc" data-cat="cloud">
-        <div class="pct"><span class="bdg bcl">Big Data</span><div class="plinks"><a href="https://github.com/Mubashir214/Pokec-Social-Network-Analysis-using-Hadoop-Distributed-File-System-HDFS-and-MapReduce" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bcl">Big Data</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Pokec-Social-Network-Analysis-using-Hadoop-Distributed-File-System-HDFS-and-MapReduce" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">Pokec Social Network Analytics (Hadoop)</div>
-        <div class="pdesc">Big data analysis on large social network dataset using Hadoop, MapReduce and ML algorithms.</div>
-        <div class="ptechs"><span class="tp">Hadoop</span><span class="tp">MapReduce</span><span class="tp">Python</span></div>
+        <div class="pdesc">Big data analysis on a 1.6M+ user social network dataset using HDFS, MapReduce, clustering, and ML algorithms at scale.</div>
+        <div class="ptechs"><span class="tp">Hadoop</span><span class="tp">HDFS</span><span class="tp">MapReduce</span><span class="tp">Python</span></div>
       </div>
 
-      <!-- DSA / OOP -->
+      <!-- ======= DSA / OOP / SYSTEMS ======= -->
+
       <div class="pc" data-cat="sys">
-        <div class="pct"><span class="bdg bsy">OOP</span><div class="plinks"><a href="https://github.com/Mubashir214/Console-based-Social-Network-Application-By-Using-OOP-Concepts" target="_blank"><i class="fab fa-github"></i></a></div></div>
-        <div class="ptitle">Console Social Network App</div>
-        <div class="pdesc">Feature-rich social network simulation built with strong OOP principles in C++.</div>
-        <div class="ptechs"><span class="tp">C++</span><span class="tp">OOP</span></div>
+        <div class="pct"><span class="bdg bsy">OOP</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Console-based-Social-Network-Application-By-Using-OOP-Concepts" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="ptitle">Console Social Network App (OOP)</div>
+        <div class="pdesc">Feature-rich social network simulation using strong object-oriented programming principles in C++ — posts, friends, feed.</div>
+        <div class="ptechs"><span class="tp">C++</span><span class="tp">OOP</span><span class="tp">Polymorphism</span></div>
       </div>
 
       <div class="pc" data-cat="sys">
-        <div class="pct"><span class="bdg bsy">DSA</span><div class="plinks"><a href="https://github.com/Mubashir214/DSA-Semester-Project-GitHub-Simulation" target="_blank"><i class="fab fa-github"></i></a></div></div>
+        <div class="pct"><span class="bdg bsy">DSA</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/DSA-Semester-Project-GitHub-Simulation" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
         <div class="ptitle">GitHub Simulation (DSA)</div>
-        <div class="pdesc">Console-based GitHub simulation using graphs, trees and advanced data structures.</div>
-        <div class="ptechs"><span class="tp">C++</span><span class="tp">Graphs</span><span class="tp">DSA</span></div>
+        <div class="pdesc">Console-based GitHub simulation implementing graphs, trees, linked lists, and advanced data structures from scratch in C++.</div>
+        <div class="ptechs"><span class="tp">C++</span><span class="tp">Graphs</span><span class="tp">Trees</span><span class="tp">DSA</span></div>
+      </div>
+
+      <div class="pc" data-cat="sys">
+        <div class="pct"><span class="bdg bsy">Optimization</span>
+          <div class="plinks"><a href="https://github.com/Mubashir214/Assignment-Problem-in-Operation-Research" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="ptitle">Operations Research Solver</div>
+        <div class="pdesc">Python solver for assignment problems in Operations Research using the Hungarian algorithm and linear optimization techniques.</div>
+        <div class="ptechs"><span class="tp">Python</span><span class="tp">Optimization</span><span class="tp">Hungarian Algo</span></div>
       </div>
 
     </div>
@@ -285,8 +553,95 @@ section{padding:110px 0}
 
 <div class="divider"></div>
 
-<!-- EDUCATION, CONTACT, FOOTER remain the same as your original file -->
-<!-- (Copy paste the original EDUCATION, CONTACT and FOOTER sections here) -->
+<!-- ==================== EDUCATION ==================== -->
+<section id="education">
+  <div class="W">
+    <div class="rv"><p class="ey">Education</p><h2 class="st">Academic <em>Background</em></h2><p class="ss">Rigorous computer science education with a focus on applied AI, distributed systems, and software engineering.</p></div>
+    <div class="edg">
+
+      <div class="edc rv d1">
+        <div class="edtype">Bachelor's Degree</div>
+        <div class="edtitle">B.Sc. Computer Science</div>
+        <div class="edsub">FAST-NUCES, Chiniot-Faisalabad Campus</div>
+        <div class="edmeta">
+          <span class="edm"><i class="fas fa-calendar"></i> 2022 – 2026</span>
+          <span class="edm"><i class="fas fa-map-marker-alt"></i> Faisalabad, Pakistan</span>
+          <span class="edm"><i class="fas fa-graduation-cap"></i> Final Year</span>
+        </div>
+        <div class="edcourses">
+          <span class="edcourse">Natural Language Processing</span>
+          <span class="edcourse">Machine Learning</span>
+          <span class="edcourse">Deep Learning</span>
+          <span class="edcourse">Data Structures & Algorithms</span>
+          <span class="edcourse">Cloud Computing</span>
+          <span class="edcourse">Database Systems</span>
+          <span class="edcourse">Software Engineering</span>
+          <span class="edcourse">Operating Systems</span>
+        </div>
+      </div>
+
+      <div class="edc rv d2">
+        <div class="edtype">Roles &amp; Experience</div>
+        <div class="edtitle">Teaching Assistant &amp; Freelancer</div>
+        <div class="edsub">FAST-NUCES &amp; Independent</div>
+        <div class="edmeta">
+          <span class="edm"><i class="fas fa-calendar"></i> 2023 – Present</span>
+          <span class="edm"><i class="fas fa-briefcase"></i> Part-time</span>
+        </div>
+        <div class="edcourses">
+          <span class="edcourse">OOP Teaching Assistant</span>
+          <span class="edcourse">Freelance Dev Projects</span>
+          <span class="edcourse">AI/ML Consulting</span>
+          <span class="edcourse">Technical Mentoring</span>
+          <span class="edcourse">Code Reviews</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact">
+  <div class="W">
+    <div class="rv"><p class="ey">Contact</p><h2 class="st">Let's build<br>something <em>great</em></h2><p class="ss">Open to full-time roles, internships, freelance projects, and research collaborations in AI/ML and software development.</p></div>
+    <div class="cg">
+      <div class="rv d1">
+        <div class="cinfos">
+          <div class="cinfo">
+            <div class="cii"><i class="fas fa-envelope"></i></div>
+            <div><div class="cil">Email</div><div class="civ">mubashirsiddique123456@gmail.com</div></div>
+          </div>
+          <div class="cinfo">
+            <div class="cii"><i class="fas fa-phone"></i></div>
+            <div><div class="cil">Phone</div><div class="civ">+92 310 685 7457</div></div>
+          </div>
+          <div class="cinfo">
+            <div class="cii"><i class="fas fa-map-marker-alt"></i></div>
+            <div><div class="cil">Location</div><div class="civ">Islamabad / Faisalabad, Pakistan</div></div>
+          </div>
+        </div>
+        <div class="csoc">
+          <a class="csoca" href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a class="csoca" href="https://www.linkedin.com/in/mubashir-siddique-2b5604365/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a class="csoca" href="mailto:mubashirsiddique123456@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+      </div>
+      <div class="rv d2">
+        <div class="cform">
+          <h3>Send a Message</h3>
+          <div class="fg"><label>Name</label><input type="text" placeholder="Your full name"></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+          <div class="fg"><label>Subject</label><input type="text" placeholder="Project / Opportunity / Collaboration"></div>
+          <div class="fg"><label>Message</label><textarea placeholder="Tell me about your project or opportunity..."></textarea></div>
+          <button class="csbtn" onclick="this.innerHTML='<i class=\'fas fa-check\'></i> Sent! I\'ll get back to you soon'"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 
@@ -300,8 +655,108 @@ section{padding:110px 0}
 </footer>
 
 <script>
-/* All your original JavaScript remains exactly the same */
- /* (Copy the entire <script> block from your original file here) */
+/* ——— CURSOR ——— */
+const cd=document.getElementById('cur-d'),cr=document.getElementById('cur-r');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px'});
+(function animCur(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(animCur)})();
+document.querySelectorAll('a,button,.pc,.skc,.edc,.cinfo').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+});
+
+/* ——— STARFIELD ——— */
+const canvas=document.getElementById('sf');
+const ctx=canvas.getContext('2d');
+let stars=[];
+function initStars(){
+  canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+  stars=Array.from({length:160},()=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.4+.2,o:Math.random()*.7+.1,s:Math.random()*.4+.05}));
+}
+function drawStars(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  stars.forEach(s=>{
+    s.o+=s.s*(Math.random()>.5?1:-1);s.o=Math.max(.05,Math.min(.9,s.o));
+    ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(238,242,255,${s.o})`;ctx.fill();
+  });
+  requestAnimationFrame(drawStars);
+}
+initStars();drawStars();
+window.addEventListener('resize',initStars);
+
+/* ——— PROGRESS BAR ——— */
+const pb=document.getElementById('pb');
+window.addEventListener('scroll',()=>{
+  const p=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;
+  pb.style.width=p+'%';
+});
+
+/* ——— NAV ——— */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('solid',window.scrollY>40));
+
+/* ——— SCROLL REVEAL ——— */
+const rvObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>rvObs.observe(el));
+
+/* ——— COUNT UP ——— */
+function countUp(el,target,dur=1400){
+  let start=null;
+  function step(ts){if(!start)start=ts;const p=Math.min((ts-start)/dur,1);el.textContent=Math.floor(p*target);if(p<1)requestAnimationFrame(step);else el.textContent=target}
+  requestAnimationFrame(step);
+}
+const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){countUp(e.target,+e.target.dataset.to);cObs.unobserve(e.target)}})},{threshold:.8});
+document.querySelectorAll('.ct').forEach(c=>cObs.observe(c));
+
+/* ——— SKILL BARS ——— */
+const barObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.querySelectorAll('.skfill').forEach(b=>b.style.width=b.dataset.w+'%');barObs.unobserve(e.target)}
+}),{threshold:.3});
+document.querySelectorAll('.skc').forEach(c=>barObs.observe(c));
+
+/* ——— PROJECT FILTER ——— */
+document.querySelectorAll('.fb').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const cat=btn.dataset.cat;
+    document.querySelectorAll('.pc').forEach(c=>{
+      const show=cat==='all'||c.dataset.cat===cat;
+      c.style.display=show?'flex':'none';
+      if(show){c.style.animation='none';void c.offsetWidth;c.style.animation='pcIn .4s ease both'}
+    });
+  });
+});
+
+/* ——— 3D CARD TILT ——— */
+document.querySelectorAll('.pc').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`translateY(-7px) perspective(900px) rotateY(${x*8}deg) rotateX(${-y*5}deg)`;
+  });
+  card.addEventListener('mouseleave',()=>card.style.transform='');
+});
+
+/* ——— HAMBURGER ——— */
+document.getElementById('hmbg').addEventListener('click',()=>document.getElementById('navul').classList.toggle('open'));
+
+/* ——— SMOOTH SCROLL ——— */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1),el=document.getElementById(id);
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});document.getElementById('navul').classList.remove('open')}
+  });
+});
+
+/* ——— ACTIVE NAV ——— */
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-ul a[href^="#"]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id});
+  navLinks.forEach(a=>{a.classList.toggle('act',a.getAttribute('href')==='#'+cur)});
+});
 </script>
 </body>
 </html>
