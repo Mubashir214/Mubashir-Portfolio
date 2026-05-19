@@ -1,348 +1,542 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mubashir — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root{
-      --bg:#0b1120;
-      --card:#111827;
-      --muted:#94a3b8;
-      --accent:#3b82f6;
-      --accent-hover:#60a5fa;
-      --glass: rgba(255,255,255,0.03);
-      --glass-2: rgba(255,255,255,0.02);
-      --maxw:1100px;
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    html,body{
-      height:100%;
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
-      color:#e5e7eb;
-      background:linear-gradient(180deg,var(--bg),#060b16 120%);
-    }
-    a{color:var(--accent);text-decoration:none}
-    a:hover{color:var(--accent-hover);}
-    .wrap{
-      max-width:var(--maxw);
-      margin:28px auto;
-      padding:28px;
-    }
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px
-    }
-    .logo{
-      width:56px;height:56px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-hover));
-      display:flex;align-items:center;justify-content:center;
-      font-weight:800;color:#0b1120;
-    }
-    nav{display:flex;gap:12px;flex-wrap:wrap}
-    nav a{padding:8px 12px;border-radius:8px;font-weight:600}
-    .hero{
-      display:grid;
-      grid-template-columns:1fr 360px;
-      gap:28px;
-      align-items:center;
-      margin-top:36px;
-    }
-    .card{
-      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));
-      padding:22px;
-      border-radius:14px;
-      box-shadow:0 6px 20px rgba(0,0,0,0.45);
-      backdrop-filter:blur(8px);
-    }
-    h1{margin:0;font-size:34px;letter-spacing:-0.6px}
-    p.lead{color:var(--muted);margin-top:8px}
-    .btn{
-      display:inline-block;
-      padding:10px 16px;
-      border-radius:10px;
-      font-weight:700;
-      background:var(--accent);
-      color:#0b1120;
-      transition:0.2s;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-    .btn:hover{background:var(--accent-hover);}
-    .skills{
-      display:flex;flex-wrap:wrap;gap:10px;margin-top:12px
-    }
-    .skill{
-      padding:8px 10px;border-radius:8px;background:var(--glass);font-weight:600
-    }
-    section{
-      display: none;
-      margin-top:40px;
-    }
-    #intro {
-      display: block;
-      margin-top: 36px;
-    }
-    h2{margin-bottom:8px}
-    .projects-grid, .education-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:16px;
-    }
-    .project{
-      padding:16px;
-      border-radius:12px;
-      background:var(--glass-2);
-      min-height:130px;
-    }
-    .project a {
-      font-size: 0.9em;
-      opacity: 0.8;
-    }
-    footer{
-      margin-top:40px;
-      color:var(--muted);
-      text-align:center;
-      padding-bottom:18px;
-    }
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .btn i {
-      margin-right: 5px;
-    }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mubashir Siddique — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{
+  --bg:#06080f;--bg2:#0a0e1a;--surface:#0f1522;--surface2:#151d2e;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);
+  --text:#eef2ff;--muted:#6b7fa3;
+  --gold:#f0a500;--gold-dim:rgba(240,165,0,0.12);--gold-glow:rgba(240,165,0,0.25);
+  --sky:#38bdf8;--sky-dim:rgba(56,189,248,0.1);
+  --rose:#fb7185;--mint:#34d399;--purple:#a78bfa;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;cursor:none}
+a{text-decoration:none;color:inherit}
+::selection{background:rgba(240,165,0,.22);color:var(--text)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:rgba(240,165,0,.3);border-radius:100px}
+
+/* CURSOR */
+#cur-d{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,opacity .2s}
+#cur-r{width:36px;height:36px;border:1px solid rgba(240,165,0,.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s,opacity .2s}
+body.hov #cur-d{width:14px;height:14px}
+body.hov #cur-r{width:54px;height:54px;border-color:rgba(240,165,0,.7)}
+
+/* STARS */
+#sf{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5}
+
+/* PROGRESS */
+#pb{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--sky));z-index:1000;width:0%;box-shadow:0 0 10px var(--gold-glow)}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;transition:background .4s,backdrop-filter .4s}
+#nav.solid{background:rgba(6,8,15,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 4px 40px rgba(0,0,0,.6)}
+.nav-logo{display:flex;align-items:center;gap:12px;font-family:'Manrope',sans-serif;font-weight:800;font-size:1.05rem}
+.nav-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#fbbf24);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#06080f;letter-spacing:.04em;animation:mGlow 3s ease infinite alternate}
+@keyframes mGlow{from{box-shadow:0 0 12px var(--gold-glow)}to{box-shadow:0 0 32px rgba(240,165,0,.5)}}
+.nav-ul{display:flex;align-items:center;gap:2px;list-style:none;position:relative}
+.nav-pill{position:absolute;bottom:0;height:100%;background:rgba(255,255,255,.05);border-radius:8px;transition:left .3s cubic-bezier(.34,1.56,.64,1),width .3s cubic-bezier(.34,1.56,.64,1);pointer-events:none;z-index:-1}
+.nav-ul a{padding:7px 15px;border-radius:8px;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:600;color:var(--muted);transition:color .2s}
+.nav-ul a:hover,.nav-ul a.act{color:var(--text)}
+.nav-cta{font-size:.8rem!important;font-weight:700!important;background:linear-gradient(135deg,var(--gold),#fbbf24)!important;color:#06080f!important;border-radius:9px!important;box-shadow:0 4px 18px var(--gold-glow);transition:transform .2s,box-shadow .2s!important}
+.nav-cta:hover{transform:translateY(-2px)!important;box-shadow:0 8px 28px rgba(240,165,0,.4)!important}
+.hbg{display:none;background:none;border:none;color:var(--text);font-size:1.3rem;cursor:pointer}
+@media(max-width:800px){.nav-ul{display:none}.hbg{display:block}#nav{padding:0 20px}
+.nav-ul.open{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(6,8,15,.97);padding:16px;border-bottom:1px solid var(--border);align-items:flex-start;gap:4px}}
+
+/* LAYOUT */
+main{position:relative;z-index:1}
+.W{max-width:1160px;margin:0 auto;padding:0 40px}
+@media(max-width:768px){.W{padding:0 20px}}
+section{padding:110px 0}
+@media(max-width:768px){section{padding:80px 0}}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2) 30%,var(--border2) 70%,transparent);margin:0 40px}
+@media(max-width:768px){.divider{margin:0 20px}}
+
+/* SECTION HEADER */
+.ey{display:inline-flex;align-items:center;gap:8px;font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.ey::before{content:'';width:24px;height:1px;background:var(--gold)}
+.st{font-family:'Manrope',sans-serif;font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;line-height:1.08;letter-spacing:-.04em;color:var(--text);margin-bottom:18px}
+.st em{font-style:normal;background:linear-gradient(90deg,var(--gold),#fbbf24 50%,var(--sky));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ss{color:var(--muted);max-width:520px;font-size:1rem;line-height:1.8}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:68px;position:relative;overflow:hidden}
+.orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px)}
+.o1{width:700px;height:700px;background:radial-gradient(circle,rgba(240,165,0,.09),transparent 65%);top:-200px;right:-150px;animation:oF 8s ease-in-out infinite}
+.o2{width:500px;height:500px;background:radial-gradient(circle,rgba(56,189,248,.07),transparent 65%);bottom:100px;left:-100px;animation:oF 11s ease-in-out infinite reverse}
+@keyframes oF{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-20px) scale(1.04)}66%{transform:translate(-20px,30px) scale(.97)}}
+.hbadge{display:inline-flex;align-items:center;gap:9px;background:rgba(240,165,0,.08);border:1px solid rgba(240,165,0,.2);border-radius:100px;padding:7px 16px;font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:600;color:var(--gold);margin-bottom:28px;width:fit-content;animation:si .7s ease both}
+.bdot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:dp 2s ease infinite}
+@keyframes dp{0%,100%{opacity:1;box-shadow:0 0 0 0 var(--gold-glow)}50%{opacity:.6;box-shadow:0 0 0 5px transparent}}
+.hname{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,12vw,11rem);line-height:.9;letter-spacing:.03em;color:var(--text);animation:si .7s .1s ease both;position:relative}
+.hname .l2{-webkit-text-stroke:1.5px rgba(240,165,0,.55);color:transparent;display:block;animation:si .7s .18s ease both}
+.hroles{display:flex;align-items:center;gap:16px;margin:20px 0 14px;flex-wrap:wrap;animation:si .7s .26s ease both}
+.hri{font-family:'Manrope',sans-serif;font-size:clamp(.8rem,1.4vw,1rem);font-weight:600;color:var(--muted);letter-spacing:.02em}
+.hrs{width:4px;height:4px;border-radius:50%;background:rgba(240,165,0,.4)}
+.hdesc{max-width:520px;color:var(--muted);font-size:1.02rem;line-height:1.8;margin-bottom:36px;animation:si .7s .34s ease both}
+.hacts{display:flex;gap:12px;flex-wrap:wrap;animation:si .7s .42s ease both}
+.bg{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;background:linear-gradient(135deg,var(--gold),#fbbf24);color:#06080f;font-family:'Manrope',sans-serif;font-weight:700;font-size:.875rem;letter-spacing:.02em;border-radius:11px;border:none;cursor:pointer;transition:transform .22s,box-shadow .22s;box-shadow:0 6px 24px var(--gold-glow)}
+.bg:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(240,165,0,.4)}
+.bgh{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;background:transparent;color:var(--text);font-family:'Manrope',sans-serif;font-weight:600;font-size:.875rem;border-radius:11px;border:1px solid var(--border2);transition:all .22s;cursor:pointer}
+.bgh:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.05);transform:translateY(-3px)}
+.hstats{display:flex;gap:48px;margin-top:72px;animation:si .7s .5s ease both}
+.hstat{border-left:2px solid var(--border2);padding-left:20px}
+.hsn{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:.04em;line-height:1;color:var(--text)}
+.hsn sup{font-size:1.4rem;color:var(--gold)}
+.hsl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+.scrl{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;animation:si .7s .7s ease both}
+.sm{width:22px;height:34px;border:1.5px solid rgba(255,255,255,.15);border-radius:100px;display:flex;justify-content:center;padding-top:6px}
+.sw{width:3px;height:7px;background:var(--gold);border-radius:100px;animation:sw 1.8s ease infinite}
+@keyframes sw{0%{transform:translateY(0);opacity:1}80%{transform:translateY(10px);opacity:0}100%{transform:translateY(0);opacity:0}}
+@keyframes si{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){.hstats{gap:24px}.scrl{display:none}}
+
+/* ABOUT */
+.ag{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;margin-top:56px}
+.at p{color:var(--muted);font-size:1rem;line-height:1.85;margin-bottom:20px}
+.achips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{padding:6px 14px;background:var(--gold-dim);border:1px solid rgba(240,165,0,.18);border-radius:100px;font-size:.78rem;font-weight:600;color:var(--gold);transition:all .2s}
+.chip:hover{background:rgba(240,165,0,.2);transform:translateY(-2px)}
+.acard{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+.acard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--sky),transparent)}
+.acard h3{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.acard h3 i{color:var(--gold)}
+.dr{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.875rem}
+.dr:last-child{border:none;padding-bottom:0}
+.dri{width:28px;height:28px;border-radius:7px;background:var(--gold-dim);border:1px solid rgba(240,165,0,.15);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.72rem;flex-shrink:0;margin-top:1px}
+.drl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:1px}
+.drv{color:var(--text);font-weight:500;font-size:.875rem}
+@media(max-width:768px){.ag{grid-template-columns:1fr;gap:36px}}
+
+/* SKILLS */
+.skg{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px;margin-top:56px}
+.skc{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.skc::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 60% 0,rgba(240,165,0,.06),transparent 60%);opacity:0;transition:opacity .35s;border-radius:18px;pointer-events:none}
+.skc:hover{transform:translateY(-6px);border-color:rgba(240,165,0,.2);box-shadow:0 28px 60px rgba(0,0,0,.55)}
+.skc:hover::after{opacity:1}
+.skci{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:16px}
+.skh{font-family:'Manrope',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:14px}
+.skps{display:flex;flex-wrap:wrap;gap:6px}
+.skp{padding:4px 9px;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:5px;font-size:.73rem;color:var(--muted);transition:all .2s}
+.skc:hover .skp{background:rgba(240,165,0,.05)}
+
+/* PROJECTS */
+.fw{display:flex;flex-wrap:wrap;gap:8px;margin:40px 0 32px}
+.fb{padding:7px 20px;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:'Manrope',sans-serif;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s}
+.fb:hover{border-color:var(--border2);color:var(--text)}
+.fb.on{background:linear-gradient(135deg,var(--gold),#fbbf24);border-color:transparent;color:#06080f;font-weight:700;box-shadow:0 4px 18px var(--gold-glow)}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+.pc{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;display:flex;flex-direction:column;transition:transform .3s cubic-bezier(.34,1.1,.64,1),box-shadow .3s,border-color .3s;position:relative;overflow:hidden;transform-style:preserve-3d}
+.pc::before{content:'';position:absolute;inset:-1px;border-radius:18px;background:linear-gradient(135deg,transparent 40%,rgba(240,165,0,.12) 100%);opacity:0;transition:opacity .3s;pointer-events:none;z-index:0}
+.pc::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.025),transparent);transition:left .55s ease;pointer-events:none}
+.pc:hover{transform:translateY(-7px) perspective(800px) rotateX(2deg);box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 0 1px rgba(240,165,0,.1);border-color:rgba(240,165,0,.2)}
+.pc:hover::before{opacity:1}
+.pc:hover::after{left:160%}
+.pc *{position:relative;z-index:1}
+.pc.hidden{display:none}
+.pct{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.bdg{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 11px;border-radius:100px}
+.bai{background:rgba(167,139,250,.12);color:var(--purple);border:1px solid rgba(167,139,250,.18)}
+.bcl{background:rgba(56,189,248,.1);color:var(--sky);border:1px solid rgba(56,189,248,.18)}
+.bfs{background:var(--gold-dim);color:var(--gold);border:1px solid rgba(240,165,0,.18)}
+.bsy{background:rgba(52,211,153,.1);color:var(--mint);border:1px solid rgba(52,211,153,.18)}
+.plinks{display:flex;gap:8px}
+.plinks a{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.82rem;transition:all .2s}
+.plinks a:hover{background:var(--gold-dim);border-color:rgba(240,165,0,.3);color:var(--gold)}
+.ptitle{font-family:'Manrope',sans-serif;font-size:1.02rem;font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.3}
+.pdesc{color:var(--muted);font-size:.86rem;line-height:1.7;flex:1;margin-bottom:18px}
+.ptechs{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tp{padding:3px 9px;background:rgba(255,255,255,.04);border-radius:5px;font-size:.72rem;color:var(--muted);font-weight:500}
+
+/* EDUCATION */
+.tl{margin-top:56px;position:relative;padding-left:32px}
+.tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--gold),var(--sky) 60%,transparent)}
+.ti{position:relative;padding-left:40px;padding-bottom:52px}
+.ti:last-child{padding-bottom:0}
+.tdot{position:absolute;left:-38px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--gold);animation:dRing 3s ease infinite}
+@keyframes dRing{0%,100%{box-shadow:0 0 0 4px rgba(240,165,0,.15),0 0 20px var(--gold-glow)}50%{box-shadow:0 0 0 8px rgba(240,165,0,.07),0 0 30px rgba(240,165,0,.35)}}
+.tyr{font-family:'Manrope',sans-serif;font-size:.72rem;font-weight:700;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.tdeg{font-family:'Manrope',sans-serif;font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:6px}
+.tsch{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--muted);margin-bottom:12px}
+.tsch i{color:var(--gold);font-size:.8rem}
+.tinfo{color:var(--muted);font-size:.9rem;line-height:1.75}
+
+/* CONTACT */
+.cg{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;margin-top:56px;align-items:start}
+.cll{display:flex;flex-direction:column;gap:12px}
+.ci{display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;color:var(--text);transition:all .25s;position:relative;overflow:hidden}
+.ci::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--gold),var(--sky));transform:scaleY(0);transform-origin:bottom;transition:transform .3s}
+.ci:hover{border-color:rgba(240,165,0,.2);transform:translateX(6px);background:var(--surface2)}
+.ci:hover::before{transform:scaleY(1)}
+.cico{width:42px;height:42px;border-radius:11px;background:var(--gold-dim);border:1px solid rgba(240,165,0,.15);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1rem;flex-shrink:0;transition:transform .2s,box-shadow .2s}
+.ci:hover .cico{transform:scale(1.1);box-shadow:0 4px 18px var(--gold-glow)}
+.clbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.cval{font-weight:600;font-size:.9rem}
+.cbox{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:40px;position:relative;overflow:hidden}
+.cbox::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--sky))}
+.cbox::after{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(240,165,0,.06),transparent 70%);top:-100px;right:-100px;pointer-events:none}
+.ctitle{font-family:'Manrope',sans-serif;font-size:1.6rem;font-weight:800;line-height:1.2;margin-bottom:12px;position:relative;z-index:1}
+.ctitle em{font-style:normal;background:linear-gradient(90deg,var(--gold),#fbbf24);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cdesc{color:var(--muted);font-size:.95rem;line-height:1.75;margin-bottom:28px;position:relative;z-index:1}
+.cbtns{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+@media(max-width:768px){.cg{grid-template-columns:1fr;gap:32px}}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:30px 40px;display:flex;align-items:center;justify-content:space-between;max-width:1160px;margin:0 auto;color:var(--muted);font-size:.82rem;position:relative;z-index:1}
+.fsoc{display:flex;gap:20px}
+.fsoc a{color:var(--muted);transition:color .2s,transform .2s;font-size:1rem}
+.fsoc a:hover{color:var(--gold);transform:translateY(-3px)}
+.fhrt{color:var(--rose)}
+@media(max-width:600px){footer{flex-direction:column;gap:16px;text-align:center;padding:24px 20px}}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
+
+/* CARD IN ANIMATION */
+@keyframes pcIn{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+</style>
 </head>
 <body>
-<div class="wrap">
-  <!-- HEADER -->
-  <header>
-    <div class="brand">
-      <div class="logo">M</div>
-      <strong>Mubashir</strong>
-    </div>
-    <nav>
-      <a href="#intro">Home</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <!-- INTRO -->
-  <section id="intro" class="hero">
-    <div>
-      <h1>Hi, I'm Mubashir 👋</h1>
-      <p class="lead">A passionate Computer Science Final Year Student specializing in Machine Learning, NLP, Transformers, and Software Engineering with a focus on AI-driven solutions and full-stack development.</p>
-      <div style="margin-top:16px">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn" href="https://github.com/Mubashir214"><i class="fab fa-github"></i> GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/mubashir-siddique-2b5604365/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>About Me</h3>
-      <p>Currently pursuing a Bachelor's in Computer Science at FAST-NUCES. I build innovative AI models, especially in NLP and RAG systems, and develop robust software applications using OOP principles and modern frameworks.</p>
-    </div>
-  </section>
+<div id="cur-d"></div>
+<div id="cur-r"></div>
+<canvas id="sf"></canvas>
+<div id="pb"></div>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">C++</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">SQL</div>
-      <div class="skill">C#</div>
-      <div class="skill">PyTorch</div>
-      <div class="skill">TensorFlow</div>
-      <div class="skill">HuggingFace Transformers</div>
-      <div class="skill">React</div>
-      <div class="skill">Next.js</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">MySQL</div>
-      <div class="skill">MongoDB</div>
-      <div class="skill">OOP</div>
-      <div class="skill">Git</div>
-      <div class="skill">Scikit-learn</div>
-      <div class="skill">NumPy</div>
-      <div class="skill">Pandas</div>
-      <div class="skill">NLP</div>
-      <div class="skill">RAG Systems</div>
-      <div class="skill">Agile/Scrum</div>
-      <div class="skill">Data Structures & Algorithms</div>
-    </div>
-  </section>
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#hero">
+    <div class="nav-mark">MS</div>
+    Mubashir Siddique
+  </a>
+  <button class="hbg" id="hmbg"><i class="fas fa-bars"></i></button>
+  <ul class="nav-ul" id="navul">
+    <div class="nav-pill" id="npill"></div>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://github.com/Mubashir214" target="_blank" class="nav-cta"><i class="fab fa-github"></i> GitHub</a></li>
+  </ul>
+</nav>
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-grid">
-      <div class="project">
-        <h3>Bachelor of Computer Science</h3>
-        <p class="muted">FAST-NUCES, Islamabad, Pakistan<br>2022 - Present</p>
-      </div>
-      <div class="project">
-        <h3>F.Sc. Pre-Engineering</h3>
-        <p class="muted">Britain International College, Multan, Pakistan<br>2020 - 2022</p>
-      </div>
-    </div>
-  </section>
+<main>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <h3>Neural Machine Translation (Urdu → Roman Urdu)</h3>
-        <p class="muted">Built a pre-trained BiLSTM sequence-to-sequence model with preprocessing for spelling variations. Implements NMT using BiLSTM encoder-decoder.</p>
-        <a href="https://github.com/Mubashir214/Neural-Machine-Translation-NMT-Urdu-to-Roman-Urdu">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>Urdu Transformer Chatbot</h3>
-        <p class="muted">Developed a pre-trained transformer-based Urdu conversational AI with tokenization and context handling. End-to-end neural chatbot using PyTorch.</p>
-        <a href="https://github.com/Mubashir214/UrduTransformer-Chatbot">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>Transformer NLP Projects: BERT Feedback Classification</h3>
-        <p class="muted">Implemented fine-tuned BERT for feedback classification. Encoder-only BERT model for customer feedback.</p>
-        <a href="https://github.com/Mubashir214/Encoder-Only-BERT-Customer-Feedback-Classification">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>Transformer NLP Projects: GPT-2/LLAMA Pseudo-code to Code</h3>
-        <p class="muted">Fine-tuned GPT-2/LLAMA for pseudo-code to C code generation. Decoder-only model implementation.</p>
-        <a href="https://github.com/Mubashir214/Decoder-Only-GPT-2-or-LLaMA-Pseudo-code-to-Code-C-Generation">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>Transformer NLP Projects: T5/BART Summarization</h3>
-        <p class="muted">Implemented T5/BART for text summarization. Encoder-decoder models for summarization tasks.</p>
-        <a href="https://github.com/Mubashir214/Encoder-Decoder-T5-BART-Text-Summarization">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>RAG Clinical Reasoning System</h3>
-        <p class="muted">Created a Retrieval-Augmented Generation pipeline for analyzing and generating reasoning from clinical notes. RAG for diagnostic reasoning (DiReCT).</p>
-        <a href="https://github.com/Mubashir214/RAG-for-Diagnostic-Reasoning-for-Clinical-Notes-DiReCT-1">GitHub</a>
-      </div>
+<!-- HERO -->
+<section id="hero" class="W">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="hbadge"><span class="bdot"></span> Open to Opportunities</div>
+  <h1 class="hname">Mubashir<span class="l2">Siddique</span></h1>
+  <div class="hroles">
+    <span class="hri">Full-Stack Developer</span>
+    <span class="hrs"></span>
+    <span class="hri">Cloud Engineer</span>
+    <span class="hrs"></span>
+    <span class="hri">AI / ML Engineer</span>
+  </div>
+  <p class="hdesc">Final-year CS student at FAST-NUCES building intelligent systems — from NLP transformers and RAG pipelines to cloud infrastructure and full-stack web applications.</p>
+  <div class="hacts">
+    <a class="bg" href="#projects"><i class="fas fa-code"></i> View Projects</a>
+    <a class="bgh" href="https://www.linkedin.com/in/mubashir-siddique-2b5604365/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a class="bgh" href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a class="bgh" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+  <div class="hstats">
+    <div class="hstat"><div class="hsn"><span class="ct" data-to="20">0</span><sup>+</sup></div><div class="hsl">Projects Built</div></div>
+    <div class="hstat"><div class="hsn"><span class="ct" data-to="3">0</span><sup>+</sup></div><div class="hsl">Tech Domains</div></div>
+    <div class="hstat"><div class="hsn"><span class="ct" data-to="4">0</span><sup>th</sup></div><div class="hsl">Year CS Student</div></div>
+  </div>
+  <div class="scrl"><div class="sm"><div class="sw"></div></div>Scroll</div>
+</section>
 
-      <!-- ==================== 5 NEW PROJECTS ADDED ==================== -->
-      <div class="project">
-        <h3>Diffusion Face Generator (Streamlit)</h3>
-        <p class="muted">AI-powered face generation application using diffusion models with interactive Streamlit interface. Generates high-quality synthetic human faces.</p>
-        <a href="https://github.com/Mubashir214/diffusion-face-generator-streamlit">GitHub</a>
-      </div>
+<div class="divider"></div>
 
-      <div class="project">
-        <h3>Developer Recommendation Model</h3>
-        <p class="muted">Intelligent recommendation system for matching developers with suitable technologies, roles, or projects using machine learning.</p>
-        <a href="https://github.com/Mubashir214/Developer-Recommend-Model">GitHub</a>
+<!-- ABOUT -->
+<section id="about">
+  <div class="W">
+    <div class="rv"><p class="ey">About Me</p><h2 class="st">Turning complex ideas<br>into <em>real software</em></h2></div>
+    <div class="ag">
+      <div class="at rv d1">
+        <p>I'm a final-year Computer Science student at FAST-NUCES with a passion for building at the intersection of AI, cloud, and web technologies. I specialize in NLP transformer models, RAG systems, cloud infrastructure (AWS / Azure), and full-stack MERN development.</p>
+        <p>Currently working on my Final Year Project and exploring opportunities in AI engineering and software development. I also work as a freelancer and Teaching Assistant.</p>
+        <div class="achips">
+          <span class="chip">NLP / Transformers</span><span class="chip">RAG Systems</span><span class="chip">MERN Stack</span>
+          <span class="chip">AWS / Azure</span><span class="chip">PyTorch</span><span class="chip">System Design</span>
+        </div>
       </div>
-
-      <div class="project">
-        <h3>Tackling Mode Collapse in GANs</h3>
-        <p class="muted">Research-focused project addressing mode collapse issues in Generative Adversarial Networks using improved training strategies.</p>
-        <a href="https://github.com/Mubashir214/Tackling-Mode-Collapse-in-Generative-Adversarial-Networks-GANs-">GitHub</a>
-      </div>
-
-      <div class="project">
-        <h3>Neural Storyteller — Image Captioning</h3>
-        <p class="muted">Seq2Seq-based image captioning system combining CNN visual features with recurrent neural networks for natural language descriptions.</p>
-        <a href="https://github.com/Mubashir214/Neural-Storyteller-Image-Captioning-with-Seq2Seq">GitHub</a>
-      </div>
-
-      <div class="project">
-        <h3>CycleGAN — Unpaired Image Translation</h3>
-        <p class="muted">Domain adaptation and unpaired image-to-image translation using CycleGAN architecture for transforming images across domains.</p>
-        <a href="https://github.com/Mubashir214/Domain-Adaptation-and-Unpaired-Image-to--Image-Translation-using-CycleGAN">GitHub</a>
-      </div>
-      <!-- ==================== END OF NEW PROJECTS ==================== -->
-
-      <div class="project">
-        <h3>Console Social Network App (OOP)</h3>
-        <p class="muted">Designed and built a user/post interaction system using object-oriented programming principles. Console-based social network using OOP concepts.</p>
-        <a href="https://github.com/Mubashir214/Console-based-Social-Network-Application-By-Using-OOP-Concepts">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>E-Commerce Management System</h3>
-        <p class="muted">Developed a modular OOP-based e-commerce application with full database integration. Database-focused e-commerce system.</p>
-        <a href="https://github.com/Mubashir214/E-commerce-Application-Database-">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>GitHub Simulation (DSA)</h3>
-        <p class="muted">Implemented a GitHub-like system using graphs and optimized data structures. Semester project simulating GitHub with DSA.</p>
-        <a href="https://github.com/Mubashir214/DSA-Semester-Project-GitHub-Simulation">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>Password Strength Analyzer</h3>
-        <p class="muted">Trained a machine-learning model to classify password strength levels. ML-based password strength analysis.</p>
-        <a href="https://github.com/Mubashir214/Password-Strength-Analyzer-ML">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>Operations Research Solver</h3>
-        <p class="muted">Implemented optimization algorithms for assignment-based OR problems. Solves assignment problems in Python.</p>
-        <a href="https://github.com/Mubashir214/Assignment-Problem-in-Operation-Research">GitHub</a>
-      </div>
-      <div class="project">
-        <h3>FYP & Scrum-Based Academic Projects</h3>
-        <p class="muted">Completed structured software projects using Scrum methodology with full documentation. Includes final year project and Scrum model implementation.</p>
-        <a href="https://github.com/Mubashir214/FYP">GitHub (FYP)</a>
-        <a href="https://github.com/Mubashir214/FYP-Scrum-Model-Train-">GitHub (Scrum)</a>
+      <div class="rv d2">
+        <div class="acard">
+          <h3><i class="fas fa-id-card"></i> Details</h3>
+          <div class="dr"><div class="dri"><i class="fas fa-map-marker-alt"></i></div><div><div class="drl">Location</div><div class="drv">Islamabad / Faisalabad, Pakistan</div></div></div>
+          <div class="dr"><div class="dri"><i class="fas fa-graduation-cap"></i></div><div><div class="drl">Degree</div><div class="drv">B.Sc. Computer Science (2022–2026)</div></div></div>
+          <div class="dr"><div class="dri"><i class="fas fa-university"></i></div><div><div class="drl">University</div><div class="drv">FAST-NUCES, Chiniot-Faisalabad</div></div></div>
+          <div class="dr"><div class="dri"><i class="fas fa-phone"></i></div><div><div class="drl">Phone</div><div class="drv">+92 310 685 7457</div></div></div>
+          <div class="dr"><div class="dri"><i class="fas fa-envelope"></i></div><div><div class="drl">Email</div><div class="drv">mubashirsiddique123456@gmail.com</div></div></div>
+          <div class="dr"><div class="dri"><i class="fas fa-briefcase"></i></div><div><div class="drl">Status</div><div class="drv">Freelancer &amp; Teaching Assistant</div></div></div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p class="muted">Phone: +92 310 685 7457</p>
-    <p class="muted">Email: mubashirsiddique123456@gmail.com</p>
-    <div class="contact-links">
-      <a class="btn" href="https://mail.google.com/mail/?view=cm&to=mubashirsiddique123456@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
-      <a class="btn" href="https://www.linkedin.com/in/mubashir-siddique-2b5604365/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a class="btn" href="https://github.com/Mubashir214"><i class="fab fa-github"></i> GitHub</a>
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="W">
+    <div class="rv"><p class="ey">Technical Skills</p><h2 class="st">Tools &amp; <em>Technologies</em></h2><p class="ss">A broad skill set spanning AI/ML research, cloud engineering, and modern full-stack development.</p></div>
+    <div class="skg">
+      <div class="skc rv d1">
+        <div class="skci" style="background:rgba(167,139,250,.12)"><i class="fas fa-brain" style="color:#a78bfa;font-size:1.2rem"></i></div>
+        <div class="skh">AI &amp; Machine Learning</div>
+        <div class="skps"><div class="skp">Python</div><div class="skp">PyTorch</div><div class="skp">TensorFlow</div><div class="skp">HuggingFace Transformers</div><div class="skp">Scikit-learn</div><div class="skp">NLP</div><div class="skp">RAG Systems</div><div class="skp">BiLSTM</div><div class="skp">NumPy</div><div class="skp">Pandas</div></div>
+      </div>
+      <div class="skc rv d2">
+        <div class="skci" style="background:rgba(56,189,248,.1)"><i class="fas fa-cloud" style="color:#38bdf8;font-size:1.2rem"></i></div>
+        <div class="skh">Cloud &amp; Systems</div>
+        <div class="skps"><div class="skp">AWS</div><div class="skp">Azure</div><div class="skp">Linux</div><div class="skp">Bash</div><div class="skp">KVM</div><div class="skp">Ceph</div><div class="skp">Hadoop / HDFS</div><div class="skp">MapReduce</div><div class="skp">SSH</div><div class="skp">Assembly</div></div>
+      </div>
+      <div class="skc rv d3">
+        <div class="skci" style="background:var(--gold-dim)"><i class="fas fa-laptop-code" style="color:var(--gold);font-size:1.2rem"></i></div>
+        <div class="skh">Full-Stack Development</div>
+        <div class="skps"><div class="skp">JavaScript</div><div class="skp">React</div><div class="skp">Next.js</div><div class="skp">Node.js</div><div class="skp">Express.js</div><div class="skp">MongoDB</div><div class="skp">MySQL</div><div class="skp">REST APIs</div><div class="skp">JWT Auth</div><div class="skp">HTML/CSS</div></div>
+      </div>
+      <div class="skc rv d4">
+        <div class="skci" style="background:rgba(52,211,153,.1)"><i class="fas fa-chart-bar" style="color:#34d399;font-size:1.2rem"></i></div>
+        <div class="skh">Monitoring &amp; Tools</div>
+        <div class="skps"><div class="skp">Prometheus</div><div class="skp">Grafana</div><div class="skp">Sensu</div><div class="skp">Git / GitHub</div><div class="skp">C++</div><div class="skp">C#</div><div class="skp">SQL</div><div class="skp">OOP</div><div class="skp">Agile / Scrum</div><div class="skp">DSA</div></div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Mubashir Siddique — All rights reserved.
-  </footer>
-</div>
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="W">
+    <div class="rv"><p class="ey">Work</p><h2 class="st">Featured <em>Projects</em></h2><p class="ss">20+ projects across AI/ML, cloud engineering, full-stack development, and systems programming.</p></div>
+    <div class="fw rv">
+      <button class="fb on" data-cat="all">All Projects</button>
+      <button class="fb" data-cat="ai">AI / ML / NLP</button>
+      <button class="fb" data-cat="fs">Full-Stack</button>
+      <button class="fb" data-cat="cloud">Cloud &amp; Systems</button>
+      <button class="fb" data-cat="sys">DSA / OOP</button>
+    </div>
+    <div class="pg rv" id="pgrid">
+
+      <!-- AI -->
+      <div class="pc" data-cat="ai"><div class="pct"><span class="bdg bai">AI / NLP</span><div class="plinks"><a href="https://github.com/Mubashir214/Neural-Machine-Translation-NMT-Urdu-to-Roman-Urdu" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Neural Machine Translation — Urdu → Roman Urdu</div><div class="pdesc">Pre-trained BiLSTM sequence-to-sequence model for translating Urdu script to Roman Urdu. Handles spelling variations with custom preprocessing and encoder-decoder architecture.</div><div class="ptechs"><span class="tp">Python</span><span class="tp">PyTorch</span><span class="tp">BiLSTM</span><span class="tp">Seq2Seq</span><span class="tp">NLP</span></div></div>
+
+      <div class="pc" data-cat="ai"><div class="pct"><span class="bdg bai">AI / NLP</span><div class="plinks"><a href="https://github.com/Mubashir214/UrduTransformer-Chatbot" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Urdu Transformer Chatbot</div><div class="pdesc">End-to-end transformer-based conversational AI for Urdu language built from scratch with custom tokenization and context handling using PyTorch.</div><div class="ptechs"><span class="tp">Python</span><span class="tp">PyTorch</span><span class="tp">Transformers</span><span class="tp">Tokenization</span></div></div>
+
+      <div class="pc" data-cat="ai"><div class="pct"><span class="bdg bai">AI / NLP</span><div class="plinks"><a href="https://github.com/Mubashir214/Encoder-Only-BERT-Customer-Feedback-Classification" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">BERT Feedback Classification</div><div class="pdesc">Fine-tuned BERT (encoder-only) model for multi-class customer feedback classification. Implements transfer learning on domain-specific feedback datasets.</div><div class="ptechs"><span class="tp">BERT</span><span class="tp">HuggingFace</span><span class="tp">PyTorch</span><span class="tp">Fine-tuning</span></div></div>
+
+      <div class="pc" data-cat="ai"><div class="pct"><span class="bdg bai">AI / NLP</span><div class="plinks"><a href="https://github.com/Mubashir214/Decoder-Only-GPT-2-or-LLaMA-Pseudo-code-to-Code-C-Generation" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">GPT-2 / LLaMA — Pseudo-code to C Code</div><div class="pdesc">Fine-tuned GPT-2 and LLaMA decoder-only models to generate C code from natural-language pseudo-code descriptions, demonstrating code generation via LLM fine-tuning.</div><div class="ptechs"><span class="tp">GPT-2</span><span class="tp">LLaMA</span><span class="tp">HuggingFace</span><span class="tp">Code Gen</span></div></div>
+
+      <div class="pc" data-cat="ai"><div class="pct"><span class="bdg bai">AI / NLP</span><div class="plinks"><a href="https://github.com/Mubashir214/Encoder-Decoder-T5-BART-Text-Summarization" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">T5 / BART Text Summarization</div><div class="pdesc">Implemented encoder-decoder T5 and BART models for abstractive text summarization, benchmarking both architectures on summarization quality metrics.</div><div class="ptechs"><span class="tp">T5</span><span class="tp">BART</span><span class="tp">HuggingFace</span><span class="tp">Summarization</span></div></div>
+
+      <div class="pc" data-cat="ai"><div class="pct"><span class="bdg bai">AI / RAG</span><div class="plinks"><a href="https://github.com/Mubashir214/RAG-for-Diagnostic-Reasoning-for-Clinical-Notes-DiReCT-1" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">RAG Clinical Reasoning System (DiReCT)</div><div class="pdesc">Retrieval-Augmented Generation pipeline for clinical diagnostic reasoning. Processes clinical notes to generate evidence-based diagnostic reasoning using RAG architecture.</div><div class="ptechs"><span class="tp">RAG</span><span class="tp">Python</span><span class="tp">LLM</span><span class="tp">Vector DB</span><span class="tp">NLP</span></div></div>
+
+      <div class="pc" data-cat="ai"><div class="pct"><span class="bdg bai">ML</span><div class="plinks"><a href="https://github.com/Mubashir214/Password-Strength-Analyzer-ML" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Password Strength Analyzer (ML)</div><div class="pdesc">Machine learning model that classifies password strength levels. Extracts character-level and statistical features for multi-class strength prediction.</div><div class="ptechs"><span class="tp">Python</span><span class="tp">Scikit-learn</span><span class="tp">Feature Eng.</span><span class="tp">Classification</span></div></div>
+
+      <!-- FULL STACK -->
+      <div class="pc" data-cat="fs"><div class="pct"><span class="bdg bfs">Full-Stack</span><div class="plinks"><a href="https://github.com/Mubashir214/FYP" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">AI Smart Scrum Assistant (FYP)</div><div class="pdesc">Web-based AI-powered Scrum management system. Automates requirement analysis, auto-generates user stories, intelligently assigns tasks based on developer skills/workload, and provides real-time sprint analytics dashboards.</div><div class="ptechs"><span class="tp">React</span><span class="tp">Node.js</span><span class="tp">MongoDB</span><span class="tp">AI</span><span class="tp">Scrum</span></div></div>
+
+      <div class="pc" data-cat="fs"><div class="pct"><span class="bdg bfs">Full-Stack</span><div class="plinks"><a href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Multi-Branch Recruitment &amp; ATS</div><div class="pdesc">Full-stack Applicant Tracking System with candidate registration, profile management, interview scheduling, Cloudinary uploads, Gmail SMTP notifications, JWT auth, and role-based access control.</div><div class="ptechs"><span class="tp">React</span><span class="tp">Node.js</span><span class="tp">Express</span><span class="tp">MongoDB</span><span class="tp">JWT</span><span class="tp">Cloudinary</span></div></div>
+
+      <div class="pc" data-cat="fs"><div class="pct"><span class="bdg bfs">Full-Stack</span><div class="plinks"><a href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Student Management System</div><div class="pdesc">Responsive full-stack web app with auth, AJAX-based content loading, Bootstrap UI components, animations, DOM manipulation, and full CRUD operations for managing student records.</div><div class="ptechs"><span class="tp">Node.js</span><span class="tp">Express</span><span class="tp">MongoDB</span><span class="tp">Bootstrap</span><span class="tp">jQuery</span></div></div>
+
+      <div class="pc" data-cat="fs"><div class="pct"><span class="bdg bfs">Full-Stack</span><div class="plinks"><a href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">BookBridge — Student Book Exchange Platform</div><div class="pdesc">Web platform for students to buy, sell, and donate academic books. Features institutional email auth, rating/review system, advanced search/filtering, real-time listing updates, and commission-based revenue model.</div><div class="ptechs"><span class="tp">React</span><span class="tp">Node.js</span><span class="tp">MongoDB</span><span class="tp">Auth</span></div></div>
+
+      <div class="pc" data-cat="fs"><div class="pct"><span class="bdg bfs">Full-Stack</span><div class="plinks"><a href="https://github.com/Mubashir214/E-commerce-Application-Database-" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">E-Commerce Management System</div><div class="pdesc">Modular OOP-based e-commerce application with full database integration covering product management, orders, users, and inventory with a relational DB backend.</div><div class="ptechs"><span class="tp">C++/C#</span><span class="tp">MySQL</span><span class="tp">OOP</span><span class="tp">Database</span></div></div>
+
+      <!-- CLOUD -->
+      <div class="pc" data-cat="cloud"><div class="pct"><span class="bdg bcl">Cloud</span><div class="plinks"><a href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Linux VM Deployment on AWS &amp; Azure</div><div class="pdesc">Provisioned and configured cloud Linux VMs on AWS and Azure. Implemented SSH key-based auth, firewall rules, subnet-level security, RDP for GUI access, and hosted static web content via public IP.</div><div class="ptechs"><span class="tp">AWS</span><span class="tp">Azure</span><span class="tp">Linux</span><span class="tp">SSH</span><span class="tp">RDP</span><span class="tp">Bash</span></div></div>
+
+      <div class="pc" data-cat="cloud"><div class="pct"><span class="bdg bcl">Big Data</span><div class="plinks"><a href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Hadoop-Based Pokec Social Network Analytics</div><div class="pdesc">Processed a 1.6M+ user social network dataset with Hadoop HDFS and MapReduce. Implemented K-Means clustering, cosine similarity, Linear Regression, and Random Forest for user behaviour analysis.</div><div class="ptechs"><span class="tp">Hadoop</span><span class="tp">HDFS</span><span class="tp">MapReduce</span><span class="tp">K-Means</span><span class="tp">Random Forest</span></div></div>
+
+      <div class="pc" data-cat="cloud"><div class="pct"><span class="bdg bcl">Systems</span><div class="plinks"><a href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Custom Linux Kernel for KVM VMs</div><div class="pdesc">Compiled a custom Linux kernel optimized for KVM virtualization. Removed redundant modules, enabled paravirtualization, integrated VirtIO drivers, and benchmarked CPU/memory/disk I/O against stock kernel.</div><div class="ptechs"><span class="tp">Linux</span><span class="tp">KVM</span><span class="tp">Kernel</span><span class="tp">VirtIO</span><span class="tp">Bash</span></div></div>
+
+      <div class="pc" data-cat="cloud"><div class="pct"><span class="bdg bcl">Cloud / DevOps</span><div class="plinks"><a href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Distributed Cloud Storage with RAID 6 &amp; Monitoring</div><div class="pdesc">Ceph-based distributed storage with RAID 6 erasure coding for fault tolerance. Multi-node clusters with auto-replication, Sensu agents for health monitoring, Prometheus metrics, and real-time Grafana dashboards.</div><div class="ptechs"><span class="tp">Ceph</span><span class="tp">RAID 6</span><span class="tp">Prometheus</span><span class="tp">Grafana</span><span class="tp">Sensu</span></div></div>
+
+      <!-- DSA / OOP -->
+      <div class="pc" data-cat="sys"><div class="pct"><span class="bdg bsy">OOP</span><div class="plinks"><a href="https://github.com/Mubashir214/Console-based-Social-Network-Application-By-Using-OOP-Concepts" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Console Social Network App</div><div class="pdesc">Feature-rich console application simulating a social network — user profiles, posts, friendships, and interactions — built fully on object-oriented programming principles.</div><div class="ptechs"><span class="tp">C++</span><span class="tp">OOP</span><span class="tp">Data Modeling</span></div></div>
+
+      <div class="pc" data-cat="sys"><div class="pct"><span class="bdg bsy">DSA</span><div class="plinks"><a href="https://github.com/Mubashir214/DSA-Semester-Project-GitHub-Simulation" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">GitHub Simulation (DSA)</div><div class="pdesc">Console-based GitHub-like system using graphs and optimized data structures to simulate repositories, commits, branches, and user interactions.</div><div class="ptechs"><span class="tp">C++</span><span class="tp">Graphs</span><span class="tp">DSA</span><span class="tp">Trees</span></div></div>
+
+      <div class="pc" data-cat="sys"><div class="pct"><span class="bdg bsy">Optimization</span><div class="plinks"><a href="https://github.com/Mubashir214/Assignment-Problem-in-Operation-Research" target="_blank"><i class="fab fa-github"></i></a></div></div><div class="ptitle">Operations Research Solver</div><div class="pdesc">Python implementation of optimization algorithms for assignment-based Operations Research problems. Solves assignment problems using the Hungarian algorithm and related methods.</div><div class="ptechs"><span class="tp">Python</span><span class="tp">Optimization</span><span class="tp">Algorithms</span></div></div>
+
+      <div class="pc" data-cat="sys"><div class="pct"><span class="bdg bsy">Scrum / FYP</span><div class="plinks"><a href="https://github.com/Mubashir214/FYP" target="_blank"><i class="fab fa-github"></i></a><a href="https://github.com/Mubashir214/FYP-Scrum-Model-Train-" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div><div class="ptitle">Scrum-Based Academic Projects</div><div class="pdesc">Structured software engineering projects following Scrum methodology — sprint planning, backlog management, and full technical documentation. Part of the Final Year Project pipeline.</div><div class="ptechs"><span class="tp">Agile</span><span class="tp">Scrum</span><span class="tp">Documentation</span><span class="tp">Team Lead</span></div></div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="W">
+    <div class="rv"><p class="ey">Education</p><h2 class="st">Academic <em>Background</em></h2></div>
+    <div class="tl">
+      <div class="ti rv d1">
+        <div class="tdot"></div>
+        <div class="tyr">2022 — 2026</div>
+        <div class="tdeg">Bachelor of Computer Science</div>
+        <div class="tsch"><i class="fas fa-university"></i> FAST-NUCES, Chiniot-Faisalabad Campus, Pakistan</div>
+        <div class="tinfo">Specializing in Machine Learning, NLP, Cloud Computing, and Software Engineering. Completed advanced coursework in Transformers, System Design, Data Structures &amp; Algorithms, Database Systems, and Operating Systems. Active Teaching Assistant and Freelancer.</div>
+      </div>
+      <div class="ti rv d2">
+        <div class="tdot" style="background:var(--sky);animation:none;box-shadow:0 0 0 4px rgba(56,189,248,.15),0 0 20px rgba(56,189,248,.3)"></div>
+        <div class="tyr" style="color:var(--sky)">2020 — 2022</div>
+        <div class="tdeg">F.Sc. Pre-Engineering</div>
+        <div class="tsch"><i class="fas fa-school" style="color:var(--sky)"></i> Britain International College, Multan, Pakistan</div>
+        <div class="tinfo">Pre-Engineering track covering Physics, Mathematics, and Chemistry, building the analytical foundation for Computer Science.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="W">
+    <div class="rv"><p class="ey">Contact</p><h2 class="st">Let's <em>Work Together</em></h2><p class="ss">Open to internships, freelance projects, and full-time opportunities in AI engineering, cloud, or full-stack development.</p></div>
+    <div class="cg">
+      <div class="cll rv d1">
+        <a class="ci" href="tel:+923106857457"><div class="cico"><i class="fas fa-phone"></i></div><div><div class="clbl">Phone</div><div class="cval">+92 310 685 7457</div></div></a>
+        <a class="ci" href="mailto:mubashirsiddique123456@gmail.com"><div class="cico"><i class="fas fa-envelope"></i></div><div><div class="clbl">Email</div><div class="cval">mubashirsiddique123456@gmail.com</div></div></a>
+        <a class="ci" href="https://www.linkedin.com/in/mubashir-siddique-2b5604365/" target="_blank"><div class="cico" style="background:var(--sky-dim);border-color:rgba(56,189,248,.15);color:var(--sky)"><i class="fab fa-linkedin"></i></div><div><div class="clbl">LinkedIn</div><div class="cval">mubashir-siddique-2b5604365</div></div></a>
+        <a class="ci" href="https://github.com/Mubashir214" target="_blank"><div class="cico" style="background:rgba(255,255,255,.05);border-color:var(--border);color:var(--text)"><i class="fab fa-github"></i></div><div><div class="clbl">GitHub</div><div class="cval">Mubashir214</div></div></a>
+      </div>
+      <div class="cbox rv d2">
+        <div class="ctitle">Ready to build<br><em>something great?</em></div>
+        <div class="cdesc">Whether you have a project in mind, need an AI solution, or want to discuss cloud architecture — I'd love to connect and explore how I can help.</div>
+        <div class="cbtns">
+          <a class="bg" href="mailto:mubashirsiddique123456@gmail.com"><i class="fas fa-paper-plane"></i> Send Email</a>
+          <a class="bgh" href="https://www.linkedin.com/in/mubashir-siddique-2b5604365/" target="_blank"><i class="fab fa-linkedin"></i> Connect</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>© 2025 Mubashir Siddique — Made with <span class="fhrt">♥</span> in Pakistan</span>
+  <div class="fsoc">
+    <a href="https://github.com/Mubashir214" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/mubashir-siddique-2b5604365/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:mubashirsiddique123456@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    function updateVisibility() {
-      const hash = window.location.hash.substring(1) || 'intro';
-      document.querySelectorAll('section').forEach(section => {
-        section.style.display = 'none';
-      });
-      const activeSection = document.getElementById(hash);
-      if (activeSection) {
-        activeSection.style.display = 'block';
-      } else {
-        document.getElementById('intro').style.display = 'block';
-      }
-    }
-    updateVisibility();
-    window.addEventListener('hashchange', updateVisibility);
+/* STARFIELD */
+(function(){
+  const c=document.getElementById('sf'),ctx=c.getContext('2d');
+  let W,H,stars=[];
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  function init(){stars=[];resize();for(let i=0;i<180;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*.9+.1,a:Math.random(),da:Math.random()*.004+.001,s:Math.random()*.2+.05})}
+  function draw(){ctx.clearRect(0,0,W,H);stars.forEach(s=>{s.a+=s.da;if(s.a>1||s.a<0)s.da*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(240,200,100,${s.a*.5})`;ctx.fill();s.x-=s.s*.12;if(s.x<-2)s.x=W+2});requestAnimationFrame(draw)}
+  window.addEventListener('resize',init);init();draw();
+})();
+
+/* CUSTOM CURSOR */
+(function(){
+  const d=document.getElementById('cur-d'),r=document.getElementById('cur-r');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;d.style.left=mx+'px';d.style.top=my+'px'});
+  (function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;r.style.left=rx+'px';r.style.top=ry+'px';requestAnimationFrame(loop)})();
+  document.querySelectorAll('a,button,.fb,.pc,.ci,.chip,.bg,.bgh,.nav-cta,.chip').forEach(el=>{
+    el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+    el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
   });
+  document.addEventListener('mouseleave',()=>{d.style.opacity=0;r.style.opacity=0});
+  document.addEventListener('mouseenter',()=>{d.style.opacity=1;r.style.opacity=1});
+})();
+
+/* PROGRESS + NAV */
+const pbar=document.getElementById('pb'),nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  pbar.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';
+  nav.classList.toggle('solid',window.scrollY>40);
+});
+
+/* ACTIVE NAV PILL */
+const allA=document.querySelectorAll('.nav-ul a[href^="#"]'),pill=document.getElementById('npill');
+function movePill(link){
+  if(!link||!pill)return;
+  const ul=link.closest('ul');if(!ul)return;
+  const p=ul.getBoundingClientRect(),r=link.getBoundingClientRect();
+  pill.style.cssText=`left:${r.left-p.left}px;width:${r.width}px;top:${r.top-p.top}px;height:${r.height}px`;
+}
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){allA.forEach(a=>a.classList.remove('act'));const a=document.querySelector(`.nav-ul a[href="#${e.target.id}"]`);if(a){a.classList.add('act');movePill(a)}}})},{threshold:.3});
+document.querySelectorAll('section[id]').forEach(s=>io.observe(s));
+
+/* SCROLL REVEAL */
+const rvO=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rvO.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(r=>rvO.observe(r));
+
+/* COUNTER */
+function countUp(el,target,dur=1400){
+  let start=null;
+  function step(ts){if(!start)start=ts;const p=Math.min((ts-start)/dur,1);el.textContent=Math.floor(p*target);if(p<1)requestAnimationFrame(step);else el.textContent=target}
+  requestAnimationFrame(step);
+}
+const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){countUp(e.target,+e.target.dataset.to);cObs.unobserve(e.target)}})},{threshold:.8});
+document.querySelectorAll('.ct').forEach(c=>cObs.observe(c));
+
+/* PROJECT FILTER */
+document.querySelectorAll('.fb').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const cat=btn.dataset.cat;
+    document.querySelectorAll('.pc').forEach(c=>{
+      const show=cat==='all'||c.dataset.cat===cat;
+      c.style.display=show?'flex':'none';
+      if(show){c.style.animation='none';void c.offsetWidth;c.style.animation='pcIn .4s ease both'}
+    });
+  });
+});
+
+/* 3D CARD TILT */
+document.querySelectorAll('.pc').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`translateY(-7px) perspective(900px) rotateY(${x*8}deg) rotateX(${-y*5}deg)`;
+  });
+  card.addEventListener('mouseleave',()=>card.style.transform='');
+});
+
+/* HAMBURGER */
+document.getElementById('hmbg').addEventListener('click',()=>document.getElementById('navul').classList.toggle('open'));
+
+/* SMOOTH SCROLL */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1),el=document.getElementById(id);
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});document.getElementById('navul').classList.remove('open')}
+  });
+});
 </script>
 </body>
 </html>
+
